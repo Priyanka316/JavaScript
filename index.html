@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript🙋‍♀️</title>
+</head>
+<body>
+    <h1>Topics covered today</h1>
+    <pre>
+        - decalaration (3 types)
+            - var
+            - let
+            - const 
+        - hoisting in js
+    </pre>
+    <h2>Data types</h2>
+    <pre>
+        int --> 1, 2, 4, float 12.5
+
+        string --> "MyName"   
+
+        booleans: true and false 
+
+        objects    
+
+        array --> [1, 2, 4, 3, 6, 8]  (arrays are also objects)
+
+        buffer --> learn while Node.js is being taught
+    </pre>
+    note : everything in javascript is getting converted into objects
+    <pre>
+        1. DECELARATIONS  
+            3 types: let, const and var    
+
+        1. var --> variable
+        var a=12; //global scope
+        console.log(a); /* in react js var will be a problem */
+
+        2. const --> constant
+        const w=12;
+        console.log(w);
+
+        3. var vs let 
+        let --> block{ghar, house} defined
+        let c=12; //block{ghar or house} scope
+        console.log(c);
+
+        {
+            var a=34;
+            console.log(a);
+        }
+
+        note : mostly 3 errors we can get
+        syntax error , referrance error, type error
+    </pre>
+    <h2>Hoisting in JS</h2>
+    <p><b> Hoisting is a default feature in JS than automatically pushes the function deleclaration at top so that it gets excuted before invocation</b></p>
+    <pre>
+        trex();
+        console.log(q);
+        var q=21;
+        function trex() {
+            console.log("Hello shinLord");
+        }    
+        trex();
+    </pre>
+    note : hoisting is not possible in let and const.
+
+    <h2>Awesome JavaScript classes🙌</h2>
+    <ol>
+        <li>Introduction to JavaScript ✅</li>
+        <li>How does Javascript work & excution Context ✅</li>
+        <li>Call stack ✅</li>
+    </ol>
+
+    <script>
+        console.log("Hello World🔥")       
+    </script>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
