@@ -41,19 +41,19 @@ function girl(){
 };
 
 //7.
-// var x=21;
-// a();
-// b();
-// console.log(a)
-// a=function(){
-//     let a;
-//     a=20;
-//     console.log(a);
-// };
-// b=function(){
-//     x=40;
-//     console.log(x);
-// };
+var x=21;
+a();
+b();
+console.log(a)
+a=function(){
+    let a;
+    a=20;
+    console.log(a);
+};
+b=function(){
+    x=40;
+    console.log(x);
+};
 
 //8.
 function fact(n){
