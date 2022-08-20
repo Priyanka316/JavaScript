@@ -1,0 +1,36 @@
+button{
+    background-color: aqua;
+    height: 40px;
+    width: 120px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    margin-bottom: 20px;
+}
+.flex1{
+    width: 70px;
+    height: 70px;
+    background-color: wheat;
+    color: #be2f16;
+    border: 2px solid;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#clock {
+    height: 50px;
+    width: 150px;
+    background-color:yellow;
+    border:10px solid yellowgreen;
+    color: black;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.heading:hover {
+    color: red;
+}

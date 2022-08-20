@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="DOM.css">
+</head>
+<body>
+    <!-- 1.Write the code to access element which is having id as "text" -->
+    <h2>1. Id as Text</h2>
+    <div id="text">1. This is text ID</div>
+
+    <!-- 2. Write the code to access element which is having tag as "h1" -->
+    <h1>2. I'm a h1 tag</h1>    
+
+
+    <!-- 3. Write the code to access element which is having class as "box" -->
+    <h2>3. Class as Box</h2>
+    <div class="box">I'm a Box</div>
+
+    <!-- 4. "<h1>Hello </h1>
+    Change the heading from ""Hello"" to ""Hello World"" using DOM functions" -->
+    <h2>4. Change heading Hello to Hello World</h2>
+    <h1 id="hello">Hello</h1>
+
+    <button onclick="changetext()">Click me</button>
+
+    <!-- 5. Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button at the bottom named "Change Flex direction". When user clicks on this button, the cards arrangement should be changed to vertical direction. -->
+    <h2>5. Flex Direction</h2>
+    <div class="flex">
+        <div class="flex1">1</div>
+        <div class="flex1">2</div>
+        <div class="flex1">3</div>
+    </div>
+    <button onclick="changeFlexDirection()">Change Direction</button>
+
+    <!-- 6. What’s the difference between window vs document? -->
+    <h2>6. Difference between window vs document</h2>
+    <p> 
+        Window: It is the root object of all the objects in the javascript. This is called as a global object. <br><br>
+
+        document: document is object like html, php etc which gets parsed inside the global object. <br><br>
+
+        we can access document properties by using window.document.property or just by using document.property
+    </p>
+
+    <!-- 7. "<h1>Hello </h1>
+    Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions" -->
+
+    <h1 class="heading">7. Hello</h1>
+
+    <!-- 8. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy" -->
+
+    <h2>8. Replace Text</h2>
+    <h1 id="ReplaceText">Welcome to Elevation academy</h1>
+    <button onclick="changeText()">Replace Text</button>
+    
+
+    <!-- 9. Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second -->
+
+    <h2>9. Timer Clock</h2>
+    <div id="clock">9:34:58</div>
+
+    <!-- 10. Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected -->
+    <h2>10. Selecting Year</h2>
+    <label for="Year">Year
+    <select name="Year" id="year" onchange="changeyear()">
+
+        <option value="2016-17">2016-17</option>
+        <option value="2017-18">2017-18</option>
+        <option value="2018=19">2018-19</option>
+        <option value="2019-20">2019-20</option>
+        <option value="2020-21">2020-21</option>
+        <option value="2021-22">2021-22</option>
+        <option value="2022-23">2022-23</option>
+        <option value="2023-24">2023-24</option>
+        <option value="2024-25">2024-25</option>
+    </select> </label>
+
+    <p>Selected Year is : <span id="print"></span></p>
+    
+
+    <!-- 11. "Create a form having name ,email, phone no. , birth year 
+    Add validations - phone no. should start with 91 , it should be 10 digits
+    email should be domain prepbytes.com
+    birth year should be > 95" -->
+    <h2>11. Form Details</h2>
+    <form action="" name="details" method="post">
+        <label for="name">Name</label>
+        <input type="name" id="name" value=""><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" value=""><br><br>
+
+        <label for="phone no">Phone No</label>
+        <input type="phone no" id="phone no" value="91"><br><br>
+
+        <label for="birth year">YOB</label>
+        <input type="number" id="birth" value="" min="90" max="20"><br><br>
+    </form>
+
+    <script src="DOM.js"></script>
+    
+</body>
+</html>
