@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP JS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/393bd706fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+</head>
+<body>
+    <div class="container" id="blur">
+    <div class="class0"><b>Tasks</b> <span class="lists">List</span></div>         
+        <div class="class1">No Items in the todo list</div> 
+
+        <span class="material-icons" onclick="toggle()">
+            add_circle
+        </span>
+        <p class="item" onclick="toggle()">Add Items</p>
+    </div>    
+
+    <div class="popup" id="popup">
+        <p class="items">Add New List</p>
+        <input type="text" id="name" value="" placeholder="Enter New List"><br>
+        <button type="button"  class="add" onclick="AddTask()">ADD</button>
+        <button class="close" onclick="toggle()">CLOSE</button>
+    </div>    
+    
+
+    <div class="popup1" id="popup1">
+        <p class="items1">Add New Item</p>
+        <input type="text" class="input1" id="name1" name="" placeholder="Enter New Item"><br>
+        <button type="button"  class="add1" id="addbtn" onclick="closeTask()">ADD</button>
+        <button class="close1" id="closebtn" onclick="closeTask()">CLOSE</button>
+    </div>
+
+        <!-- <div id="back-button">
+            <i id="backIcon" class="fas fa-arrow-circle-left" onclick="displayAll()"></i>
+            Back
+        </div> -->
+
+    <div id="flex-cards"></div>
+    <script src="./index.js"></script>
+</body>
+</html>
