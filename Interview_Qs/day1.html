@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1</title>
+</head>
+<body>
+    <h1>Interview Preperation Questions with Answers</h1>
+    <h3>1. Difference between “ == “ and “ === “ operators.</h3>
+    <p> == is used for comparison between two variables irrespective of the datatype of variable. <br>
+        === is used for comparision between two variables but this will check strict type, which means it will
+        check datatype and compare two values.</p>
+    <h3>2. What is the spread operator?</h3>
+    <p>The JavaScript spread operator ( ... ) allows us to quickly copy all or part of an existing array or object into another array or object.</p>
+    <h3>3. What are the differences between var, let and const?</h3>
+    <p> let - <ol type="1"> 
+            <li>we can declare the variable name in one line and initialize it on another line or in 
+                the same line itself.</li>
+            <li>Two variables with same name aren't possible with let</li>
+            <li>We can reassign/update the values of the variable which have already been initialized.</li>
+            <li>let is block scoped.</li>
+            <li>Let doesn't supports Hoisting.</li>             
+        </ol>
+
+        const - <ol type="1"> 
+            <li>we have to declare the variable and initialize in the same line itself.</li>
+            <li>Two variables with same name aren't possible with const.</li>
+            <li>We can't reassign/update the values of the variable which have already been initialized.</li>
+            <li>const is block scoped.</li>
+            <li>const also doesn't supports Hoisting.</li>
+        </ol>
+
+        var - <ol type="1">
+            <li>we can declare the variable name in one line and initialize it on another line 
+                or in the same line itself.</li>
+            <li>Two variables with same name are possible with var</li>
+            <li>We can reassign/update the values of the variable which have already been initialized.</li>
+            <li>var is global scoped.</li>
+            <li>var supports Hoisting.</li> 
+            </ol></p>
+    <h3>4. What is execution context</h3>
+    <p>The Execution Context contains the code that's currently running, and everything that aids in its execution.
+
+        During the Execution Context run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, executable byte-code gets generated, and the code gets executed.
+        
+        There are two kinds of Execution Context in JavaScript:
+    <ol type="1">
+        <li>Global Execution Context (GEC)</li>
+        <li>Function Execution Context (FEC)</li>
+    </ol></p>
+    <h3>5. What is creation phase and execution phase?</h3>
+    <p>Creation Phase:
+        In the creation phase, the Execution Context is first associated with an Execution Context Object (ECO). The Execution Context Object stores a lot of important data which the code in the Execution Context uses during its run-time. <br><br>
+        
+        The creation phase occurs in 3 stages, during which the properties of the Execution Context Object are defined and set. These stages are:
+    <ul type="">
+        <li>Creation of the Variable Object (VO)</li>
+        <li>Creation of the Scope Chain</li>
+        <li>Setting the value of the this keyword</li> 
+    </ul>
+    
+       The Execution Phase:
+        Finally, right after the creation phase of an Execution Context comes the execution phase. This is the stage where the actual code execution begins.
+
+        Up until this point, the VO contained variables with the values of undefined. If the code is run at this point it is bound to return errors, as we can't work with undefined values.
+    </p>
+    <h3>6. What is meant by first class functions</h3>
+    <p>First Class FUnctions(FCF's) - FCF's are those fns which can be passed as an argument into another function
+        or can be returned from another functions. They are also called as First Class Citizens.</p>
+    <h3>7. What are closures? Give an example of closures</h3>
+    <p>Closures - Its not something that we create manually or explicitly. It happens automatically in sertain      situations which we need to analyze/realize ourselves.
+       Closure makes a function remember all the variables that existed in the function birth place initially.</p>
+    <span>Example:
+        <pre>const ticketBooking = function(){
+            let passengerCount0 = 0;
+            let passengerCount1 = 0;
+            return function() {
+                passengerCount0++;
+                passengerCount1++;
+                console.log(`the count of the passengers are ${passengerCount0} ${passengerCount1}`);
+            }
+         }
+        
+        const bookie = ticketBooking() 
+        console.log(bookie);
+        console.log(bookie);
+        bookie();
+        bookie();
+        bookie();</pre>
+    </span>
+</body>
+</html>
