@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY 2</title>
+</head>
+<body>
+    <h1>Interview Preperation Questions with Answers</h1>
+    <h3>1. Explain call(), apply() and, bind() methods. Give an example of call(), apply(), bind()</h3>
+    <p>Call invokes the function and allows you to pass in arguments one by one. Apply invokes the function and allows you to pass in arguments as an array. Bind returns a new function, allowing you to pass in a this array and any number of arguments.
+    </p>
+    <p>call():In this case of call each and every argument which is required to be passed to th function will be passed individually
+    </p>
+    <span>Example:</span>
+    <pre>console.log("call()");
+        let user = {
+            name:"keerthi",
+            age:20,
+            city:"Ahmedabad"
+        }
+        let user1 = {
+            name:"manoj",
+            age:20,
+            city:"gujrat"
+        }
+        
+        function UserDetails(company,designation){
+            console.log("Hello",this);
+            console.log(this.name + "is" + this.age + "years old",company," ",designation);
+        }
+        UserDetails.call(user1,"Google","Backend Developer");
+        
+        console.log("---------------------------------------------------");</pre>
+    <p>apply():In case of apply each and every argument which is required to be passed to the function will be passed inside an array
+    </p>
+    <span>Example:</span>
+    <pre>console.log("apply()");
+
+        UserDetails.apply(user,["HP","frontend Developer"]);
+        
+        console.log("---------------------------------------------------");
+    </pre>
+        
+    <P>bind():In case of bind ,it will return yo a new function.And this new function you can use anytime anywhere.</P>    
+    <span>Example:</span>
+    <pre>console.log("bind()");
+        
+        const newFunction = UserDetails.bind(user);
+        newFunction("Flipkart","Data Sceintist");
+        
+        console.log("---------------------------------------------------");
+    </pre>
+
+<h3>2. What are objects in javascript?</h3>
+<p>Object is non-preimitive data type.An object type is simply a collection of properties in the form of name and value pairs. Object is used to store the data.</p>
+<span>Example:</span>
+<pre>console.log("Objects");
+
+    const ObjName = {
+        name:'Sairam',
+        age:24,
+    }
+    
+    console.log('I am '+ObjName.age + 'years old');
+    console.log("----------------------------------------------------");
+</pre>
+
+<h3>3. What are function constructors?</h3>
+<p>Function costructor is kind of regular function to create multiple objects at a time. A constructor is a function that creates an instance of a class which is typically called an “object”.</p>
+<span>Example:</span>
+<pre>console.log("Function Constructor");
+
+    function Person(name,salary){
+        this.name = name,
+        this.salary = salary
+    }
+    
+    const person1 = new Person('sanjay',50000);
+    console.log(person1.name);
+    
+    console.log("----------------------------------------------------");
+</pre>
+
+<h3>4. Explain prototypes</h3>
+<p>The prototype property allows you to add properties and methods to any object (Number, Boolean, String and Date, etc.).</p>
+<span>Example:</span>
+<pre>const Person = {
+    Pname:"Roshan",
+    mname:"Apple",
+    price: 57000,
+    showDetails: function(){
+        console.log(`The Person is ${Person.Pname},and mname is ${Person.mname},and it's price is ${Person.price}`);
+        return (`manem is ${Person.mname},and its's price is ${Person.price}`);
+    }    
+}
+console.log(Person);
+
+const Dress = {
+    Pant:"Bellbottom",
+    rate:2000,
+    ring:"gold",
+    Ttlbill:
+    showDetails=function(){
+        console.log(`Pant name is ${Dress.Pant},and it's rate is ${Dress.rate},and ring is ${Dress.ring},and Total Bill is ${Dress.Ttlbill}`);
+        return (`Pant name is ${Dress.Pant},and it's rate is ${Dress.rate},and ring is ${Dress.ring},and Total Bill is ${Dress.Ttlbill}`);
+    }
+}
+console.log(showDetails());
+console.log(Dress);
+
+Dress.__proto__ = Person;
+console.log(Dress.Pname)</pre>
+
+<h3>5. What is prototype chain</h3>
+<p>Each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own.</p>
+<span>Example:</span>
+<pre>console.log("prototype and prototype chain");
+
+    function Data(name,age){
+        this.name = name;
+        this.age = age;
+        this.salary = 10000000;
+    }
+    
+    let data1 = new Data("Anwar",23);
+    let data2 = new Data("shanth",45);
+    
+    console.log(data1);
+    console.log(data2);
+    
+    
+    
+    //in case ,if you want to add other properties by using function constructor:
+    
+    
+    data1.salary = 500000;
+    console.log(data1);
+    
+    //in case when you want to add properties inside the function constructor
+    
+    Data.prototype.Nationality = "India";
+    data1.Nationality = "American";
+    console.log(data1.Nationality);
+    </pre>
+
+<h3>6. Give an example of inheritance using function constructor</h3>
+<p>Inheritance is browing the method and properties of some object, able to use in the same way as the prototype.Basically it inherit the values of parent object</p>
+<span>Example:</span>
+<pre>console.log("Inheritence");
+
+    function Animal(name,color){
+        this.name = name;
+        this.color = color;
+    }
+    
+    function AnimalDescription(name,color,age,sound){
+        Animal.call(this,name,color);
+        this.age = age;
+        this.sound = sound;
+    }
+    
+    let Animal1 = new AnimalDescription('Bruno','Dark',2,'Barks')
+    console.log(Animal.prototype);
+    console.log(Animal1);
+    
+    console.log("----------------------------------------------------");
+    </pre>
+<h3>7. What are callbacks?</h3>
+<p>Function which is passed as argument to another function.Call back called after certain period of time. SetTimeout and setInteval are the examples of callback function which will called after certain interval of time.</p>
+<span>Example:</span>
+<pre>console.log("callback");
+
+    function output(callback){
+        console.log("out");
+        callback()
+    };
+    function input(){
+        console.log("in");
+    };
+    output(input);
+    
+    
+    
+    console.log("callback with setTimeout");
+    function firstFunction(){
+        setTimeout(function(){
+            console.log("First function called");
+        },1000);
+    }
+    
+    function secondFunction(){
+        console.log("Second function called");
+    }
+    
+    firstFunction();
+    secondFunction();</pre>
+<h3>8. What is the use of setTimeout</h3>
+<p>The setTimeout() method is used to call a function or evaluate an expression 'after' a specified number of milliseconds.For example,let's log a message after 2 seconds using setTimeout method</p>    
+</p>
+<span>Example:</span>
+<pre>console.log("setTimeout");
+
+    setTimeout(function(){
+        console.log("Hi everyone");
+    },3000)
+</pre>
+
+<h3>9. What are pure functions?</h3>
+<p>A Pure Function is a function (a block of code) that always returns the same result if the same arguments are passed. It does not depend on any state or data change during a program's execution.</p>
+<span>Example:</span>
+<pre>function calculateGST( productPrice ) {
+    console.log(productPrice * 0.05);;
+}
+calculateGST(5);
+</pre>
+<script src="day2.js"></script>
+</body>
+</html>
