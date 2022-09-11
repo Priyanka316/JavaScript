@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+</head>
+<body>
+    <h1>Interview Preperation Questions with Answers</h1>
+    <h3>1. What are promises and why do we need them?</h3>
+    <p>Promise something that is heaven for callback.Trying to reduce the use of callback hell as much as possible that is why promises has been made.</p>
+    <p>Promises are used to handle asynchronous operations in JavaScript</p>
+    <p>Invented just to reduce the use of callback hell</p>
+    <p> They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code</p>
+    <p>It also allows us to make API calls or fetch data from Web Servers successfully. If not 
+     able to do so fetches us with an error message.</p>
+    <p>There are three things in promises</p>
+    <ol>
+        <li>Pending</li>
+        <li>Resolve</li>
+        <li>Reject</li>
+    </ol>
+    <p>When ever promises are made we need to use new keyword.Using promise we can write cleaner code and in a efficient way. Allow us to handle the errors using reject method</p>
+
+    <h3>8. What is promise chaining</h3>
+    <p>Promises using .then method. Use of multiple 
+    .then method are called as promise chaining</p>
+    <span>Example:</span>
+
+    <h3>2. What is the purpose of async/await keywords?</h3>
+    <p>Async/Await - They are used to handle promises more efficiently. The word async before a function
+    always means that the function always returns a PROMISE. So, we therefore use async before the function name to return a promise instead of a value.</p>
+    <p> Await is used to wait for the result that is to be returned from the promise. So, we use await 
+    when we are calling a function which returns a promise. Also, we can use them(Async/Await) for making API(Application Programming Interface) calls.</p>
+    <p> Await is always used with the keyword async</p> 
+    <p>Async and await introduced in ES8 version.To write code much efficient and more readable than the promise and callback.but async and await also return new promise</p>
+
+    <h3>10. Give an example of async/await</h3>
+
+    <h3>3. What is hoisting?</h3>
+    Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution</p>
+    <p>this means that no matter where functions and variables are declared, they are moved to the top of their scope regardless of whether their scope is global or local.</p>
+
+    <h3>4. What is the DOM?</h3>
+    <p>The Document Object Model (DOM) is an application programming interface (API) for HTML and XML documents. </p>
+    <p>The  Document Object Model is the data representation of the objects that comprise the structure and content of a document on the Web </p>
+
+    <h3>5. Difference between undefined vs not defined vs NaN</h3>Undefined:The undefined property indicates that the variable has not been assigned a value or not declared at all.</p>
+    <p>Nan:The NaN property represents a “Not-a-Number” value.Check the number is legal or not</p>
+    <p>not defined:variables not defined using let const and var we are trying to access those value it will give not defined</p>
+
+    <h3>6. How many operators do we have in JS ?</h3>
+    <p>we have 7 operations in js</p>
+    <ol>
+        <li>Arithmetic operators</li>
+        <p>+,-,%,/,*</p>
+        <li>Comparision operators</li>
+        <p>=,===,==,!=</p>
+        <li>Bitwise operators</li>
+        <p>&,|</p>
+        <li>Increment,Decrement operators</li>
+        <p>a++,a-- ,--a,++a</p>
+        <li>Logical operators</li>
+        <p>&&,||</p>
+        <li>Ternary operators</li>
+        <p>condition?a:b</p>
+        <li>comma operators</li>
+        <p>,</p>
+    </ol>
+
+    <h3>7. What is callback hell</h3>
+    <p>way of executing a function after certain interval of time that will create a pyramid like structure and it is more complex to readable and to debug.</p>
+    
+    <h3>9. What are arrow functions?</h3>
+    <p>It is introduced in ES6 version.Introduced to write the function in shorter form.It is also called as fat arrow function. Arrow functions are write anonymous function</p>
+    <script src="./day3.js"></script>
+    
+</body>
+</html>
